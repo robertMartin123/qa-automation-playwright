@@ -9,11 +9,11 @@ from pages.home_page import HomePage
 #
 #     print("Finished navigation")
 
-@pytest.fixture
-def page(context):
-    page = context.new_page()
-    yield page
-    page.close()
+# @pytest.fixture
+# def page(context):
+#     page = context.new_page()
+#     yield page
+#     page.close()
 
 
 
