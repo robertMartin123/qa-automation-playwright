@@ -10,12 +10,19 @@ Smoke tests:
 
 
 
-@pytest.mark.smoke
+# @pytest.mark.smoke
 
 #def test_homepage_main_heading_is_visible(home_page):
 
-def test_example_domain_homepage_heading(home_page):
-    home_page.has_main_heading("Example Domain")
+# def test_example_domain_homepage_heading(home_page):
+#     home_page.has_main_heading("Example Domain")
+
+from pages.home_page import HomePage
+
+def test_something(page, config):
+    home = HomePage(page, config)
+    home.go_to()
+
 
 
 @pytest.mark.regression

@@ -3,6 +3,14 @@ import os
 import datetime
 from config.config_loader import get_config
 
+from pages.home_page import HomePage
+
+@pytest.fixture
+def home_page(page, config):
+    return HomePage(page, config)
+
+
+
 
 # ✅ Config fixture
 @pytest.fixture(scope="session")
