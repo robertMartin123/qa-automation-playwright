@@ -3,8 +3,6 @@ name: Playwright Tests
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   test:
@@ -22,29 +20,18 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install pytest pytest-playwright
           playwright install --with-deps
 
       - name: Run tests
-        run: |
-          pytest --headed
+        run: pytest
 
-      - name: Upload screenshots
+      - name: Upload artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots
-          path: screenshots/
-
-      - name: Upload videos
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: videos
-          path: videos/
-
-      - name: Upload traces
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: traces
-          path: trace_failed.zip
+          name: test-artifacts
+          path: |
+            screenshots/
+            videos/
+            trace*.zip
