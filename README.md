@@ -1,5 +1,7 @@
 # QA Automation Framework – Playwright (Python)
 
+[![Playwright Tests](https://github.com/robertMartin123/qa-automation-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/robertMartin123/qa-automation-playwright/actions/workflows/playwright.yml)
+
 ## 📌 Overview
 This project is a professional-grade UI test automation framework built using Playwright and Pytest.
 
