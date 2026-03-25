@@ -1,5 +1,7 @@
 # QA Automation Framework – Playwright (Python)
 
+---
+
 [![Playwright Tests](https://github.com/robertMartin123/qa-automation-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/robertMartin123/qa-automation-playwright/actions/workflows/playwright.yml)
 
 ## 👤 Author
