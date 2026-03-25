@@ -7,7 +7,7 @@
 Robert Martin  
 Senior QA Engineer (Automation | Playwright | Python)
 
-
+---
 
 ## 📌 Overview
 This project is a professional-grade UI test automation framework built using Playwright and Pytest.
