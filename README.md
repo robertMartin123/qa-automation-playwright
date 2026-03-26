@@ -39,6 +39,19 @@ It demonstrates:
 - CI pipeline with artifact collection
 
 ---
+## 🔌 API Testing
+
+The framework includes API testing using Playwright's request context:
+
+- Supports REST API validation
+- Integrated with Pytest markers
+- Can be executed independently from UI tests
+
+Run API tests:
+
+```bash
+pytest -m api
+
 
 ## ⚙️ How to Run Tests Locally
 

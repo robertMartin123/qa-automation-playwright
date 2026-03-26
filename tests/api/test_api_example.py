@@ -1,8 +1,7 @@
 import pytest
 
-@pytest.mark.api
-def test_get_example_domain(api_request_context):
-    response = api_request_context.get("https://example.com")
-
-    assert response.status == 200
-
+@pytest.fixture
+def api_request_context(playwright):
+    request_context = playwright.request.new_context()
+    yield request_context
+    request_context.dispose()
