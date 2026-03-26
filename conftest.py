@@ -10,6 +10,17 @@ def home_page(page, config):
     return HomePage(page, config)
 
 
+import pytest
+from playwright.sync_api import sync_playwright
+
+@pytest.fixture(scope="session")
+def api_request_context():
+    with sync_playwright() as p:
+        request_context = p.request.new_context()
+        yield request_context
+        request_context.dispose()
+
+
 
 
 # ✅ Config fixture
@@ -61,3 +72,5 @@ def pytest_runtest_makereport(item, call):
         if context:
             context.tracing.stop(path="trace_failed.zip")
             print("\n📦 Trace saved: trace_failed.zip")
+
+
