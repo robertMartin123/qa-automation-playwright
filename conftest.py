@@ -10,15 +10,13 @@ def home_page(page, config):
     return HomePage(page, config)
 
 
-import pytest
-from playwright.sync_api import sync_playwright
 
-@pytest.fixture(scope="session")
-def api_request_context():
-    with sync_playwright() as p:
-        request_context = p.request.new_context()
-        yield request_context
-        request_context.dispose()
+
+@pytest.fixture
+def api_request_context(playwright):
+    request_context = playwright.request.new_context()
+    yield request_context
+    request_context.dispose()
 
 
 

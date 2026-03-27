@@ -39,6 +39,20 @@ It demonstrates:
 - CI pipeline with artifact collection
 
 ---
+
+## 📊 Data-Driven Testing
+
+The framework supports data-driven testing using Pytest parameterization.
+
+Example:
+
+```python
+@pytest.mark.parametrize("username,password", get_login_data())
+
+
+
+
+---
 ## 🔌 API Testing
 
 The framework includes API testing using Playwright's request context:
