@@ -14,7 +14,11 @@ def home_page(page, config):
 
 @pytest.fixture
 def api_request_context(playwright):
-    request_context = playwright.request.new_context()
+    request_context = playwright.request.new_context(
+        ignore_https_errors = True
+    )
+
+
     yield request_context
     request_context.dispose()
 
