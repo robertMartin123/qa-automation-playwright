@@ -39,6 +39,28 @@ It demonstrates:
 - CI pipeline with artifact collection
 
 ---
+## 📊 Test Reporting  
+
+The framework generates HTML test reports:
+
+```bash
+pytest --html=report.html --self-contained-html
+
+
+
+
+## ⚡ Parallel Execution
+
+The framework supports parallel test execution using pytest-xdist to improve performance and reduce runtime.
+
+Run tests in parallel:
+
+```bash
+pytest -n auto
+
+
+
+
 
 ## 📊 Data-Driven Testing
 
@@ -52,7 +74,7 @@ Example:
 
 
 
----
+
 ## 🔌 API Testing
 
 The framework includes API testing using Playwright's request context:
