@@ -12,9 +12,22 @@ Senior QA Engineer (Automation | Playwright | Python)
 ---
 
 ## 📌 Overview
-This project is a professional-grade UI test automation framework built using Playwright and Pytest.
+This project is a professional UI and API test automation framework built using Playwright and Pytest.
 
-It demonstrates:
+## Objectives
+
+This project demonstrates practical QA Automation engineering practices including:
+
+- UI automation with Playwright
+- API testing strategies
+- Page Object Model architecture
+- Fixture-based dependency management
+- CI/CD pipelines with GitHub Actions
+- Test reporting and debugging
+- Parallel execution
+
+## Framework Highlights
+- Maintainable automation framework architecture
 - Page Object Model (POM)
 - Fixture-based architecture
 - Test stability and debugging strategies
@@ -46,7 +59,26 @@ The framework generates HTML test reports:
 ```bash
 pytest --html=report.html --self-contained-html
 
+```
 
+
+## v1.4 — July 2026
+
+## 📝 Latest Update — July 2026
+
+### Added
+- LoginPage page object example
+- AI-assisted learning exercise
+- QA prompt templates
+
+Removed
+- Legacy API example test
+
+Improved
+- Repository cleanliness
+- Git ignore configuration
+- Git ignore management
+- Project structure
 
 
 ## ⚡ Parallel Execution
@@ -57,6 +89,8 @@ Run tests in parallel:
 
 ```bash
 pytest -n auto
+
+```
 
 
 
@@ -70,6 +104,8 @@ Example:
 
 ```python
 @pytest.mark.parametrize("username,password", get_login_data())
+
+```
 
 
 
@@ -87,6 +123,8 @@ Run API tests:
 
 ```bash
 pytest -m api
+
+```
 
 
 ## ⚙️ How to Run Tests Locally
